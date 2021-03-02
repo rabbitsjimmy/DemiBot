@@ -1,6 +1,9 @@
 # DemiBot
 A discord bot made for fun and memes
 
+All of the code here is my own except for the discord message sensor which sends encouragements, that is from an article I found about making a discord bot and helped start this entire project.
+
+
 main.py: houses all of the commands for the bot, it is lacking a help command 
 classes.py: currently only contains code for connecting to any subreddit and scraping/ sending posts to discord setup in a class system
 funcs.py: miscellaneous functions which are stored in there to make main.py shorter
