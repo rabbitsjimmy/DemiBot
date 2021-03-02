@@ -3,7 +3,7 @@ from keep_alive import keep_alive
 import funcs as f
 import classes as c
 
-#['ksm802', 'kvg8ui', 'kvg5gp']
+
 
 if "lim" not in r.db.keys():
   r.db["lim"] = 150
@@ -12,19 +12,6 @@ if "lim" not in r.db.keys():
 memes = c.post(subreddit='memes', announce=['ksm802'])
 if len(memes.posts) == 0:
   memes.get_post()
-
-#animemes = c.post(subreddit='Animemes', announce=['kvg8ui', 'kvg5gp'])
-#if len(animemes.posts) == 0:
-#  animemes.get_post()
-
-#dankmemes = c.post(subreddit='dankmemes', announce=['kvr9o6'])
-#if len(dankmemes.posts) == 0:
-#  dankmemes.get_post()
-
-#facepalm = c.post(subreddit='facepalm', announce=['k95urr', 'kvzx5n'])
-#if len(facepalm.posts) == 0:
-#  facepalm.get_post()
-
 
 
 sad_words = ["sad", "depressed", "unhappy", "angry", "miserable", "depression", "feeling down", "this bot sucks", "I'm tired", "i'm tired", "im tired", "suck", "sucks", "rip"]
@@ -36,7 +23,7 @@ starter_encouragements = [
   "Everything gets better"
 ]
 
-retricted_channels = [572111005652484116, 549771607510351873, 667590171553824788, 431199184532668416, 620412060567601152, 687430176296009764, 431229881146408969, 643938912028590114, 753257580721209435, 643939000276615182, 438129056207077377]
+retricted_channels = []
 
 
 
@@ -109,14 +96,6 @@ async def on_message(message):
   if msg.startswith('$meme'):
     await memes.send_posts(message)
 
-  #if msg.startswith('$animeme'):
-  #  await animemes.send_posts(message)
-
-  #if msg.startswith('$dankmeme'):
-  #  await dankmemes.send_posts(message)
-
-  #if msg.startswith('$facepalm'):
-  #  await facepalm.send_posts(message)
 
   if msg.startswith('$create'):
     await f.new_sub(message)
